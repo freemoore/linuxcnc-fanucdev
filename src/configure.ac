@@ -243,6 +243,7 @@ AC_ARG_WITH(realtime,
 AC_SUBST([RTS])
 
 TOOL_NML=no
+TOOL_NML=yes
 AC_ARG_ENABLE(toolnml,
     AS_HELP_STRING(
         [--enable-toolnml],
