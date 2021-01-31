@@ -45,29 +45,29 @@
 #define PI_2 GO_PI_2
 
 /* default DH parameters, these should be ok for a puma - at least according to Craig */
-#define DEFAULT_A1 0
-#define DEFAULT_ALPHA1 0
-#define DEFAULT_D1 0
+#define DEFAULT_A1 270
+#define DEFAULT_ALPHA1 PI_2
+#define DEFAULT_D1 1000
 
-#define DEFAULT_A2 0
-#define DEFAULT_ALPHA2 -PI_2
+#define DEFAULT_A2 900
+#define DEFAULT_ALPHA2 0
 #define DEFAULT_D2 0
 
-#define DEFAULT_A3 300
-#define DEFAULT_ALPHA3 0
-#define DEFAULT_D3 70
+#define DEFAULT_A3 270
+#define DEFAULT_ALPHA3 PI_2
+#define DEFAULT_D3 0
 
-#define DEFAULT_A4 50
-#define DEFAULT_ALPHA4 -PI_2
-#define DEFAULT_D4 400
+#define DEFAULT_A4 0
+#define DEFAULT_ALPHA4 PI_2
+#define DEFAULT_D4 1300
 
 #define DEFAULT_A5 0
 #define DEFAULT_ALPHA5 PI_2
 #define DEFAULT_D5 0
 
 #define DEFAULT_A6 0
-#define DEFAULT_ALPHA6 -PI_2
-#define DEFAULT_D6 0
+#define DEFAULT_ALPHA6 0
+#define DEFAULT_D6 -270
 
 typedef struct {
   go_link links[GENSER_MAX_JOINTS]; /*!< The link description of the device. */
