@@ -22,6 +22,8 @@
 # link description
 # link1 - stationary base
 # link2 .. link7 - the 6 moving parts of the robot, numbered from base to end effector
+# 
+# you must build your robot from the controlled point backwards to the base. 
 
 from vismach import *
 import hal
@@ -138,14 +140,15 @@ link2 = Color([1,1,0,1],[link2])
 link2 = Rotate([link2], 0,0,0,1)
 link2 = Rotate([link2], 0,0,1,0)
 link2 = Translate([link2], -270,0,-1000) 
+#link blue W joint with yellow base
 link2 = Collection([link3, link2])
 link2 = Translate([link2], 270,0,0) 
 #rotate so X is in X direction
 link2 = Rotate([link2], -90,0,0,0)
 link2 = HalRotate([link2],c,"joint1",1,0,0,1)
 
-#move link2 up - edit - move it all the way up to 1m, per fanuc s420f
-link2 = Translate([link2], 0,0,1000) #note: 23.45 = 26.45(drawing) - 3 (from j2 to J1 in Z)
+#move link2 up - edit - move it up to 1m, per fanuc s420f
+link2 = Translate([link2], 0,0,1000) 
 link1 = AsciiOBJ(filename="fanuc_stationary_base_link0_rep_pumalink1.obj");
 link1 = Color([0,0,0,0],[link1])
 link1 = Rotate([link1], 180,0,0,1)
